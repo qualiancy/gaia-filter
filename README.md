@@ -1,4 +1,4 @@
-# gaia-filter
+# gaia-filter [![Build Status](https://secure.travis-ci.org/qualiancy/gaia-filter.png?branch=master)](https://travis-ci.org/qualiancy/gaia-filter)
 
 > Array filtering inspired by MongoDB's query language.
 
