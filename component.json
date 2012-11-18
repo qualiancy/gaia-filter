@@ -1,0 +1,15 @@
+{
+    "name": "gaia-filter"
+  , "repo": "qualiancy/gaia-filter"
+  , "version": "0.0.0"
+  , "description": "Array filtering inspired by MongoDB's query language."
+  , "license": "MIT"
+  , "keywords": [
+    ]
+  , "main": "lib/filter.js"
+  , "scripts": [
+        "lib/filter.js"
+    ]
+  , "dependencies": {}
+  , "development": {}
+}
