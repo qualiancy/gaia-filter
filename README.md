@@ -133,7 +133,7 @@ indicate if the data at that index passed the query criteria.
 ```js
 var query = { $or : [ { 'hello': true }, { 'universe': true } ] }
   , q = filter(query)
-  , results= q.pass([
+  , result = q.pass([
         { hello: true }
       , { universe: false }
       , { hello: false, universe: true }
@@ -144,11 +144,11 @@ result.should
   .be.an('array')
   .and.have.length(4)
   .and.deep.equal([
-     true
-   , false
-   , true
-   , false
- ]);
+      true
+    , false
+    , true
+    , false
+  ]);
 ```
 
 
@@ -182,10 +182,10 @@ result.should
 
 The following are the comparators implemented
 for use as part of a query. They can also be used
-for simple comparation, such as `filter.$eq(2,2)` which
-would return `true`.
+for simple comparation, such as `filter.comparators.$eq(2,2)`,
+which would return `true`.
 
-#### .$gt (a, b)
+##### $gt (a, b)
 
 * **@param** _{Number}_ a 
 * **@param** _{Number}_ b 
@@ -194,7 +194,7 @@ would return `true`.
 Assert `a` is greater than `b`.
 
 
-#### .$gte (a, b)
+##### $gte (a, b)
 
 * **@param** _{Number}_ a 
 * **@param** _{Number}_ b 
@@ -203,7 +203,7 @@ Assert `a` is greater than `b`.
 Assert `a` is greater than or equal to `b`.
 
 
-#### .$lt (a, b)
+##### $lt (a, b)
 
 * **@param** _{Number}_ a 
 * **@param** _{Number}_ b 
@@ -212,7 +212,7 @@ Assert `a` is greater than or equal to `b`.
 Assert `a` is less than `b`.
 
 
-#### .$lte (a, b)
+##### $lte (a, b)
 
 * **@param** _{Number}_ a 
 * **@param** _{Number}_ b 
@@ -221,7 +221,7 @@ Assert `a` is less than `b`.
 Assert `a` is less than or equal to `b`.
 
 
-#### .$all (a, b)
+##### $all (a, b)
 
 * **@param** _{Array}_ a 
 * **@param** _{Array}_ b 
@@ -230,7 +230,7 @@ Assert `a` is less than or equal to `b`.
 Assert `a` contains at least all items in `b`.
 
 
-#### .$exists (a, b)
+##### $exists (a, b)
 
 * **@param** _{Mixed}_ a 
 * **@param** _{Boolean}_ b 
@@ -239,7 +239,7 @@ Assert `a` contains at least all items in `b`.
 Assert truthiness of `a` equals `b`.
 
 
-#### .$mod (a, b)
+##### $mod (a, b)
 
 * **@param** _{Number}_ a 
 * **@param** _{Array}_ b 
@@ -248,7 +248,7 @@ Assert truthiness of `a` equals `b`.
 Assert `a` mod (`%`) `b[0]` equals `b[1]`.
 
 
-#### .$eq (a, b)
+##### $eq (a, b)
 
 * **@param** _{Mixed}_ a 
 * **@param** _{Mixed}_ b 
@@ -257,7 +257,7 @@ Assert `a` mod (`%`) `b[0]` equals `b[1]`.
 Assert `a` equals (`===`) `b`.
 
 
-#### .$eq (a, b)
+##### $eq (a, b)
 
 * **@param** _{Mixed}_ a 
 * **@param** _{Mixed}_ b 
@@ -266,7 +266,7 @@ Assert `a` equals (`===`) `b`.
 Assert `a` does not equal (`!==`) `b`.
 
 
-#### .$in (a, b)
+##### $in (a, b)
 
 * **@param** _{Mixed}_ a 
 * **@param** _{Array}_ b 
@@ -275,7 +275,7 @@ Assert `a` does not equal (`!==`) `b`.
 Assert `a` is in `b` using `indexOf`.
 
 
-#### .$nin (a, b)
+##### $nin (a, b)
 
 * **@param** _{Mixed}_ a 
 * **@param** _{Array}_ b 
@@ -284,7 +284,7 @@ Assert `a` is in `b` using `indexOf`.
 Assert `a` is not in `b` using `indexOf`.
 
 
-#### .$size (a, b)
+##### $size (a, b)
 
 * **@param** _{Mixed}_ a 
 * **@param** _{Number}_ b 
@@ -295,7 +295,7 @@ Assert `a` has length of `b`. Returns
 property.
 
 
-#### .$or (a)
+##### $or (a)
 
 * **@param** _{Array}_ a 
 * **@return** _{Boolean}_  
@@ -303,7 +303,7 @@ property.
 Assert `a` has at least one truthy value.
 
 
-#### .$nor (a)
+##### $nor (a)
 
 * **@param** _{Array}_ a 
 * **@return** _{Boolean}_  
@@ -311,14 +311,12 @@ Assert `a` has at least one truthy value.
 Assert `a` has zero truthy values.
 
 
-#### .$and (a)
+##### $and (a)
 
 * **@param** _{Array}_ a 
 * **@return** _{Boolean}_  
 
 Assert `a` has all truthy values.
-
-
 
 ## License
 
