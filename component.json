@@ -10,6 +10,8 @@
   , "scripts": [
         "lib/filter.js"
     ]
-  , "dependencies": {}
+  , "dependencies": {
+        "qualiancy/tea-properties": "0.1.0"
+    }
   , "development": {}
 }
